@@ -1,0 +1,59 @@
+project:
+  type: website
+  resources: 
+        - productivity-single.pdf
+  preview: 
+    port: 4200
+    browser: false
+website:
+  title: "Delegates Training Unit 4"
+  navbar:
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Economics and Political Economy"
+        href: productivity.qmd
+        
+  sidebar:
+    - title: "Economics and Political Economy"
+      style: "docked"
+      contents:
+        - productivity.qmd
+        - inflation.qmd
+        - political-economy.qmd
+
+
+format:
+  html:
+    bibliography: references.bib
+    fig-format: svg
+    fig-width: 8
+    fig-asp: 0.618
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+  docx:
+    fig-format: svg
+    fig-width: 8
+    fig-asp: 0.618
+  typst:
+    logo:
+      location: right-top
+      padding-left: 1in
+      padding-bottom: 2in
+    fig-format: svg
+    fig-width: 8
+    fig-asp: 0.618
+
+
+editor: visual
+execute: 
+  echo: false
+  warning: false
+  message: false
+  
+brand:  _brand.yml
+

@@ -1,0 +1,157 @@
+---
+title: "Political Economy"
+---
+
+Economics was once the realm of the philosopher.
+
+In about the 1950s to 1960s, a new school of economists decided that adding maths equations to economics made it more rigorous, and more scientific. This shifted the discipline away from thinking about the interaction of the economy and the government, instead thinking of it as an abstract concept which can be modelled, and those models can be used to make predictions.
+
+## What is The Economy?
+
+-   Is the economy how much we produce in total?
+-   Is the economy how much we produce per person?
+-   Is the economy how well we meet the needs of society?
+-   Is the economy how well the stock market is performing?
+
+## Political Economy
+
+What we call 'economics' today is very different from what would have been called economics in the 1960s, economics in the 1890s, economics in the 1600s, and economics before agriculture.
+
+The study of economics is ideological. It is a social science, not a hard science. There is no Nobel prize in economics (the Nobel Memorial Prize in Economic Sciences was not and is not one of the original 5).
+
+Early economics was philosophical - looking at questions like:
+
+-   What is work? What is production?
+
+-   What is value?
+
+The study of economics has always been a reflection of the politics of the time.
+
+In the 1600s, the dominant ideology of Britain was *mercantilism,* based on the growing power of Britain, and the vast trade networks they had developed through colonialism. The economics of the time was a reflection of this ideology, highlighting the ways in which trade was important for a country's economic development. Economists argued for increased power of the state (to strengthen colonial power) and for government's to maintain a trade surplus.
+
+In France, about 100 years later, the *physiocrats* considered two distinct industries - agricultural, and non-agricultural, in reflection of the growing industrialisation in workshops and of artisans. The physiocrats believed that only agricultural labour could create value in the products of society, and that non-agricultural labour was unproductive.
+
+Despite what economists would have you believe:
+
+-   Economics is not an independent, neutral, or technical system
+
+-   Economics is inherently linked to political ideology.
+
+-   You can't eat "headline inflation fell to 2.4%"
+
+## Political Economy - Modern Economics
+
+**Classical Economics**
+
+Prior to and during the industrial revolution, classical economics was developed, primarily through Adam Smith - advancing the theory of the divisibility of labour - that it is more productive for individuals to specialise in one part of the creation of a product, rather than the whole chain. Again - the economics is reflective of the political - increased work in factories, industrial revolution, factory work. Adam Smith is seen by some as the guy who invented free market economics. But Smith was strongly opposed to monopolies, and recognised the importance of *class*, compared to *individual.*
+
+Some ideas have lasted longer than others. Smith's division of labour is still popular today. Others, like Malthus who argued that any wages greater than that required to subside would fuel unstable population growth that absorbed any real income growth, have *mostly* died out.
+
+Ricardo invented a theory of free trade which said that all economies are made better off by specialising in the industry they have comparative advantage which is only true in theory - but is still trotted out by free market advocates today.
+
+**Marxism** was a response to the conditions under which labour was treated during the industrial period - long hours, terrible conditions, high death rates, child labour etc, as well as the growing and obvious disaprities in wealth between the owners of capital, and those who had to work for a living. One insight from Marxism about capitalism is "the tendency for the rate of profit to fall", which says basically, over time, the rate of profit to the amount of invested capital decreases over time. I think that such a theory explains a lot about the development of capitalism and economics since the 1900s.
+
+**Neoclassical**
+
+Focus on the individual, and equilibrium in markets. Bring in mathematics and models to try and answer economic questions. Neoclassical theories are based on abstract ideas, rather than the visible realities. Stuff like:
+
+-   Everyone is born with some endowment of labour power, skill, or another resource.
+
+-   Everyone is born with a set of preferences which determine what they like to consume.
+
+-   Technology converts endowments into usable goods and services.
+
+-   Trading through markets makes sure that everything is optimal.
+
+Which leads to the conclusion that:
+
+-   the market fixes everything and;
+
+-   profit represents the productivity of owned capital - and it is morally justifiable - just explain away the exploitation.
+
+Brief interlude with Keynesianism (explicitly a response to the great depression)- the situation won't resolve itself, and government can stop unemployment by boosting demand (govt spending, taxation, interest rates)
+
+But the return in the 1970s of neoclassical economics (explicitly a response to the stagflation of the 1970s), consolidated today as neoliberalism returns us back to the market solving everyone's problems.
+
+The most important message is:
+
+-   Economics *reflects* the the political ideology, not the other way around!
+
+-   Economists (as social scientists) have ideas about ways that the economy *should* function
+
+-   "Classical" economics is associated with the development of capitalism and the industrial revolution in the late 1700 and early 1800s.
+
+-   Marxism was a response to the horrible working conditions under which labour was subjected during the industrial revolution - and the associated disparity between capital class and working class.
+
+## Political Economy - Modern Economics
+
+-   Class analysis was neglected in the late 1800s and early 1900s in favour of analysis of individuals. This is "Neo Classical" economics, and is what they teach at University.
+
+-   When thinking of economics, remember that it is ideological:
+
+    -   What kind of growth do we want?
+
+    -   Efficiency for whom?
+
+    -   Who should get the benefits of increased productivity?
+
+## Work and Value
+
+It is impossible to produce value without work. Even fully automated production lines require:
+
+-   Labour to produce the equipment
+
+-   Labour to monitor the equipment
+
+-   Labour to repair the equipment
+
+Profit represents a payment on private capital to the owner of that capital. But profit itself is not a productive activity - but a social relationship between owner, worker, and capital. Profit can be used to re-invest into more capital - and this was the fundamental driver of capitalism during the industrial revolution. Productivity increases from the increased division of labour rapidly increased profits. SOME of these profits were re-invested into production - both to maintain machinery, and to improve processes. Of course, some of the profits were consumed by the 'capitalist fat cat' - which is why they're always depicted as such during this period.
+
+-   Everything in the economy comes from some combination of work and the natural environment, but only work can "add value"
+
+-   There have been many attempts to define value - but clearly productive labour is the only source of it.
+
+-   Capital is not inherently 'productive', despite being paid profit.
+
+## Class Consciousness and Solidarity
+
+-   Capitalists understand the importance of class solidarity.
+-   Identity politics, culture war, woke vs. anti-woke, etc. are tools used to keep the working class from building solidarity.
+
+Class solidarity is important - in a positive and negative sense. Capitalists maintain strong class consciousness and solidarity, and work hard to prevent solidarity forming in other classes.
+
+When the economy was based on manufacturing and heavy industry like mining, steel working, and shipbuilding, it was very easy to characterize the classes.
+
+A small number of people owned capital in the form of a factory, or mine - or occasionally - state run monopolies in sectors like automotive manufacturing - with very few 'supervisors'.
+
+The division of labour was stark - you had workers on one side and the bosses or state on the other. Most households were *proletarian* or "working class" and the bosses were the *bourgeois* or capitalist class.
+
+-   See: the Simpsons nuclear power plant.
+
+This period coincides with strong trade union membership, a strong sense of working class identity, and a strong understanding of the power that existed in its collectivism.
+
+The theoretical underpinning behind class is rooted in the relationship between individual and the means of production. If you didn't own the equipment which made the product you were working class.
+
+Beyond the theoretical (or economical), there are *social* elements to class as well - including culture, pastimes, institutions, even where you live.
+
+Post the 1960s, the decline in mining, construction, and manufacturing resulted in a change in the structure of the economy - away from manual work, and towards clerical, administrative, and supervisory work - the white collar. Advances in technology further resulted in increases in technician or supervisory, foreman style work at the expense of manual labour.
+
+Ratio of services output to manufacturing output.
+
+This has had a huge impact on trade union density.
+
+Just as the capitalist today is aesthetically different from the factory owner of the industrial revolution, so too has the working class changed.
+
+It isn't as easy today to spot the capitalist class. Unlike in the industrial revolution, the company owner is unlikely to be on the factory floor - patrolling and keeping everyone in line. The modern capitalist tries to trade on the aesthetics of the working class.
+
+The concentration of wealth among the capital class however, has only increased since the industrial age. More and more wealth is held by fewer and fewer people. Owning shares, or investing in a mutual fund, does not make you a member of the capitalist class.
+
+# What Is To Be Done?
+
+Power comes from recognising that productive labour is the only source of value created in the economy. Without workers, there are no products. Without products, there is no profit to be collected by the capitalist. Financial institutions might keep swapping IOUs but this doesn't make for a happy or fed society.
+
+Building labour power
+
+Building labour density
+
+Individual actions like voting, calling your local MP, protesting, signing a petition. Might work. But constrained by the choices we are offered, lobbying, one person can't make a difference.

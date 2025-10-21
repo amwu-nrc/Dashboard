@@ -1,0 +1,424 @@
+---
+title: "Inflation"
+---
+
+```{r}
+#| label: setup-inflation
+library(reportabs)
+library(tidyverse)
+library(directlabels)
+library(geomtextpath)
+library(readabs)
+library(gghighlight)
+library(strayr)
+library(gt)
+cpi <- read_abs_local("6484.0", filenames = "648401.xlsx", path = "data") |> 
+  separate_series(column_names = c("data_type", "cpi_category", "capital_city"))
+
+cpi_quarterly <- read_absdata("cpi_quarterly", export_dir = "data")
+wpi_quarterly <- read_absdata("wpi_quarterly", export_dir = "data")
+national_accounts <- read_abs_local(cat_no = "5206.0", path = "data")
+
+plot_date_range <- function(plot_data) {
+
+ date_min <- as.Date(min(plot_data$date))
+  date_max <- as.Date(max(plot_data$date))
+
+  pre <- scales::breaks_pretty(n = 5)(c(date_min, date_max))
+  date_adj <- as.numeric(pre[length(pre)] - date_max)
+  adj <- pre - date_adj
+  names(adj) <- NULL
+  date_breaks <- adj[adj >= date_min & adj <= date_max]
+  return(date_breaks)
+
+}
+
+  
+```
+
+Inflation has been a hot topic with cost of living increases, and interest rate decisions. Under neo-liberalism, inflation has become the single most important economic priority, coinciding with the increased dominance and "importance" of the financial industry and financial capital at the expense of productive industries like manufacturing.
+
+Controlling inflation is seen as a more important policy goal than:
+
+-   full employment
+
+-   reducing inequality
+
+-   housing affordability
+
+-   alleviating poverty.
+
+Instead of full employment, government and institutions now push the "non-accelerating inflation rate of unemployment" which suggests there is a minimum level of unemployment necessary in order to stop wages growth and rising inflation. Of course, we can't measure the NAIRU, only show that it might exist, if a bunch of assumptions are made about how the economy works. Estimates from data suggest that it falls somewhere between 4 and 5%.
+
+This means that it is explicit government policy to keep up-to 5% of the labour force out of work, in order to keep inflation down.
+
+Such policy might be palatable if there was a strong social safety net to support workers who lose their job and are looking for another one. Of course, we don't even get that, with only the below poverty JobSeeker payment available.
+
+But it is still a very inefficient use of the labour power that our economy has access to. Why shouldn't someone who wants to work not have access to a job? It also means that policy is designed to discipline labour.
+
+Which by the way, is why the budget in 2024, by the nominative party of labour, forecast that the plan was to tackle inflation by driving the unemployment rate UP to at least 4.5 percent by June 2025. Cold comfort for those who find themselves unemployed.
+
+## Defining Inflation (or, the Consumer Price Index)
+
+The CPI is a measure of changes in the price of a "basket" of goods and services.
+
+By their nature, averages are not representative of individuals. Statistical agencies have to make a lot of decisions when calculating price indices, including:
+
+-   What goes into the basket?
+
+-   How should like items be grouped?
+
+-   How should each group be weighted into the overall?
+
+-   How often should the weighting change?
+
+Ultimately, the basket of goods and services does not represent the spending or expenditure patterns of any one individual. There will be a disconnect between how the CPI is reported, and how you feel it as an individual.
+
+For example, in 2025 the weight of tobacco in the CPI was reduced because tobacco sales fell as fewer people are smoking. That means increases in the price of cigarettes don't impact on the overall CPI as much. So smokers will feel that prices are increasing faster than the CPI.
+
+Another disconnect between reporting of the CPI and worker experiences is that mortgage payments are excluded from the housing element of the CPI - only the price of a new home (excluding land) and changes in the price of rents are included.
+
+CPI data is reported as an ***index***, or as a ***% change compared to the previous quarter***, or previous year. An *index* shows how prices have changed relative to a value of 100 in a reference period. A percentage change measures the relative change in prices compared to another period.
+
+### Inflation - Percentage Change
+
+```{r}
+#| label: fig-inflation-pc
+#| fig-cap: "Consumer Price Index, Percentage Change from Corresponding Month of Previous Year"
+cpi_pc <- cpi |> 
+  filter(data_type == "Percentage Change from Corresponding Month of Previous Year",
+         capital_city == "Australia",
+         cpi_category == "All groups CPI",
+         date >= "2020-01-01") 
+
+cpi_pc |> 
+  ggplot(aes(x = date, y = value, col = "inflation")) +
+  geom_line() +
+  theme_nrc() +
+  scale_x_date(date_labels = "%e %b\n%Y",
+               breaks = plot_date_range(cpi_pc)) +
+  scale_y_continuous(labels = scales::label_percent(scale = 1)) + 
+  labs(title = "Percentage Change in the CPI from Corresponding Month of Previous Year",
+       subtitle = "All groups CPI; Australia",
+       y = NULL,
+       x = NULL) +
+  annotate(geom = "textsegment", 
+           arrow = arrow(), 
+           label = "increasing inflation",
+           x = as_date("2020-06-01"), 
+           y = 2,
+           xend = as_date("2022-12-01"), 
+           yend = 10) +
+  annotate(geom = "textsegment", 
+           arrow = arrow(),
+           label = "decreasing inflation",
+           x = as_date("2022-12-01"),
+           y = 10,
+           xend = as_date(max(cpi_pc$date)),
+           yend = 3)
+```
+
+### Inflation - Index
+
+While decreasing inflation (a % change in one period lower than the % change in the preceding period) is usually presented in the media as good news, it is important to remember that inflation is a measure of acceleration. Decreasing inflation means that the rate of price increases has slowed. Just because you take the foot off the accelerator, does not mean the car goes backwards.
+
+```{r}
+#| label: fig-inflation-index
+#| fig-cap: Consumer Price Index, Index (June 2011 = 100) 
+
+cpi_index <- cpi |> 
+  filter(data_type == "Index Numbers",
+         capital_city == "Australia",
+         cpi_category == "All groups CPI",
+         date >= "2020-01-01")
+
+cpi_index |> 
+  ggplot(aes(x = date, y = value, col = "inflation")) +
+  geom_line() +
+  theme_nrc() +
+  scale_x_date(date_labels = "%e %b\n%Y",
+               breaks = plot_date_range(cpi_index)) +
+  labs(title = "Consumer Price Index",
+       subtitle = "Australia; All Groups CPI",
+       y = NULL,
+       x = NULL) +
+  annotate(geom = "textsegment", 
+           arrow = arrow(), 
+           label = "increasing prices",
+           x = as_date("2020-06-01"), 
+           y = 110,
+           xend = as_date("2022-12-01"), 
+           yend = 120) +
+  annotate(geom = "textsegment", 
+           arrow = arrow(),
+           label = "increasing prices",
+           x = as_date("2022-12-01"),
+           y = 120,
+           xend = as_date(max(cpi_index$date)),
+           yend = 130)
+```
+
+The all groups CPI is a measure of the average price change of all groups. But the impact of price changes in some categories, like food, recreation and culture, and housing are felt differently than changes to prices in household equipment. @fig-cpi-category shows the change in the prices of some categories.
+
+```{r}
+#| label: fig-cpi-category
+#| fig-cap: CPI by category
+cpi_category <- cpi |> 
+  filter(cpi_category %in% c("All groups CPI",
+                             "Food and non-alcoholic beverages",
+                             "Alcohol and tobacco",
+                             "Clothing and footwear",
+                             "Housing",
+                             "Furnishings, household equipment and services",
+                             "Health", 
+                             "Transport",
+                             "Communications",
+                             "Recreation and Culture",
+                             "Education",
+                             "Insurance and financial services"),
+         series_type == "Original",
+         data_type == "Index Numbers",
+         capital_city == "Australia") |> 
+  group_by(cpi_category) |> 
+  mutate(reindex = 100*value/value[date=="2020-03-01"]) |> 
+  filter(date >= as_date("2020-03-01")) |> 
+  ungroup()
+
+cpi_category |> 
+  ggplot(aes(x = date, y = reindex, col = cpi_category)) +
+  geom_line() +
+  scale_x_date(date_labels = "%e %b\n %Y",
+               breaks = plot_date_range(cpi_category)) +
+  gghighlight(cpi_category %in% c("Housing", "All groups CPI", "Food and non-alcoholic beverages", "Furnishings, household equipment and services")) +
+  theme_nrc() +
+  labs(y = NULL,
+       x = NULL,
+       title = "Consumer Price Index (100 = March 2020)",
+       subtitle = "CPI Expenditure Classes") +
+  scale_colour_nrc() 
+```
+
+## Cost of Living
+
+The CPI is not a measure of the cost of living. In fact there is no definitive cost of living measure collected by the ABS but the ABS does collect a living cost index, which looks at different household types expenditure patterns.
+
+The living cost index asks "By how much would after tax money incomes need to change to allow households to purchase the same quantity of consumer goods and services that they purchased in the base period?"
+
+```{r}
+#| label: tbl-cost-of-living
+#| tbl-cap: Employee households cost of living
+#| tbl-subcap: ["Change over last year", "Change over last decade"]
+#| layout-ncol: 2
+
+lci <- read_abs_local("6467.0", filenames = "646702.xlsx", path = "data") |> 
+  separate_series(c("data_type", "household_type", "cpi_category")) 
+
+# table on the left
+lci |> 
+  filter(data_type == "Percentage Change from Corresponding Quarter of Previous Year", 
+         !is.na(value), 
+         date == max(date),
+         household_type == "Employee households") |> 
+  select(cpi_category, value) |> 
+  add_row(cpi_category = "Wages",
+          value = 3.4) |> 
+  arrange(-value) |> 
+  gt(rowname_col = "cpi_category") |> 
+  tab_header(title = md("**Change in living costs by product category**"),
+             subtitle = "% change between June 2025 and June 2024") |> 
+  tab_stubhead(label = "Price Category") |> 
+  tab_style(style = cell_text(weight = "bold"),
+            locations = cells_body(
+              rows = cpi_category %in% c("All groups", "Wages")
+            )) |> 
+  fmt_percent(columns = value, scale = F, decimal = 1) |> 
+  cols_label(value = "% change")
+
+# table on the right
+lci |> 
+  filter(data_type == "Index Numbers", 
+         !is.na(value), 
+         date %in% c(max(date), max(date)-years(10)),
+         household_type == "Employee households") |> 
+   group_by(cpi_category) |> 
+  mutate(percentage = 100*(value-lag(value))/lag(value)) |>
+  ungroup() |> 
+  filter(date == max(date)) |> 
+  select(cpi_category, percentage) |> 
+  add_row(cpi_category = "Wages",
+          percentage = 28.7) |> 
+  arrange(-percentage) |> 
+  gt(rowname_col = "cpi_category") |> 
+  tab_header(title = md("**Change in living costs by product category**"),
+             subtitle = "% change between June 2025 and June 2015") |> 
+  tab_stubhead(label = "Price Category") |> 
+  tab_style(style = cell_text(weight = "bold"),
+            locations = cells_body(
+              rows = cpi_category %in% c("All groups", "Wages")
+            )) |> 
+  fmt_percent(columns = percentage, scale = F, decimal = 1) |> 
+  cols_label(percentage = "% change")
+
+```
+
+## Inflation and Wages
+
+When discussing inflation, we need to consider the relationship between increasing prices and increasing wages. If wages are increasing at the same rate as prices, then no ones purchasing power is getting any better or worse. How this feels will depend on the historical relationship between prices and wages.
+
+The Wage Price Index (**WPI**) measures the change in the price of wages. The real value of wages can be calculated by looking at the difference between the WPI, and the CPI, as shown in @fig-wpi-cpi. This shows that on average, prices have increased by 25.1%, and wages have increased by 22.1%. So in real terms, the purchasing power of the average wage has fallen by 3% - a decline in standard of living.
+
+```{r}
+#| label: fig-wpi-cpi
+#| fig-cap: Change in real value of wages since March 2020. 
+cumulative_cpi <- cpi_quarterly |> 
+  filter(indicator == "Index Numbers",
+         state == "Australia",
+         cpi_expenditure_class == "All groups CPI",
+         date >= "2020-03-01") |> 
+  mutate(cumulative_inflation = value - value[date=="2020-03-01"]) |> 
+  select(date, cumulative_inflation)
+
+cumulative_wpi <- wpi_quarterly |> 
+  filter(state == "Australia",
+         unit == "Index Numbers",
+         indicator == "Total hourly rates of pay excluding bonuses",
+         sector == "Private and Public",
+         industry == "All industries",
+         date >= "2020-03-01") |> 
+  mutate(cumulative_wages = value - value[date=="2020-03-01"]) |> 
+  select(date, cumulative_wages) |> 
+  distinct()
+
+
+cumulative <- inner_join(cumulative_wpi, cumulative_cpi) |> 
+  mutate(cumulative_real_wage = cumulative_wages - cumulative_inflation) |> 
+  pivot_longer(cols = -date,
+               values_to = "value",
+               names_to = "indicator") |> 
+  mutate(indicator = case_when(
+    indicator == "cumulative_wages" ~ "Hourly rates of pay",
+    indicator == "cumulative_inflation" ~ "CPI",
+    indicator == "cumulative_real_wage" ~ "Real hourly rates of pay"
+  )) |> 
+  mutate(value_label = ifelse(date == max(date),
+                              scales::label_percent(scale = 1, accuracy = 0.1)(value),
+                              NA))
+
+cumulative |> 
+  ggplot(aes(x = date, y = value, colour = indicator)) +
+  geom_line() +
+  scale_x_date(breaks = plot_date_range(cumulative),
+               date_labels = "%e %b\n %Y") +
+  scale_y_continuous(labels = scales::label_percent(scale = 1)) +
+  scale_colour_nrc() +
+  labs(x = NULL,
+       y = NULL,
+       title = "Wages Have Not Kept Up With Inflation",
+       subtitle = "Cumulative change in hourly rates of pay and the CPI since March 2020") +
+  geom_dl(method = "last.qp", aes(label = value_label)) + 
+  theme_nrc(legend = "bottom")
+
+```
+
+What would this chart look like if the average worker recieved a 6% pay rise for the next year, and inflation grew at the RBA's target of 2.5%?. @fig-wpi-cpi-fc shows that this would only represent breaking even with the real value of wages in March 2020. We're a long far behind at ***improving***living standards.
+
+```{r}
+#| label: fig-wpi-cpi-fc
+#| fig-cap: Forecast change in real value of wages since March 2020
+fc <- tibble(
+  date = as_date(c("2025-09-01", "2025-12-01", "2026-03-01", "2026-06-01")),
+  cumulative_wages = rep(22.1+6, 4),
+  cumulative_inflation = c(25.1+2.5/4, 25.1+2.5/3, 25.1+2.5/2, 25.1+2.5)
+) |> 
+  mutate(cumulative_real_wage = cumulative_wages - cumulative_inflation)
+
+cumulative_forecast <- inner_join(cumulative_wpi, cumulative_cpi) |> 
+  mutate(cumulative_real_wage = cumulative_wages - cumulative_inflation) |> 
+  bind_rows(fc) |> 
+  pivot_longer(cols = -date,
+               values_to = "value",
+               names_to = "indicator") |> 
+  mutate(indicator = case_when(
+    indicator == "cumulative_wages" ~ "Hourly rates of pay",
+    indicator == "cumulative_inflation" ~ "CPI",
+    indicator == "cumulative_real_wage" ~ "Real hourly rates of pay"
+  )) |> 
+  mutate(value_label = ifelse(date == max(date),
+                              scales::label_percent(scale = 1, accuracy = 0.1)(value),
+                              NA))
+
+cumulative_forecast |> 
+  ggplot(aes(x = date, y = value, colour = indicator)) +
+  geom_line() +
+  scale_x_date(breaks = plot_date_range(cumulative),
+               date_labels = "%e %b\n %Y") +
+  scale_y_continuous(labels = scales::label_percent(scale = 1)) +
+  scale_colour_nrc() +
+  labs(x = NULL,
+       y = NULL,
+       title = "Wages Have Not Kept Up With Inflation",
+       subtitle = "Cumulative change in hourly rates of pay and the CPI since March 2020 with 6% pay rise for 2025-26 and 2.5% inflation ") +
+  geom_dl(method = "last.qp", aes(label = value_label)) + 
+  theme_nrc(legend = "bottom")
+  
+```
+
+Different economists will use different prices to convert nominal dollars into real dollars. The one they choose will often be the one that tells the story they want to tell. @fig-wpi-cost-of-living shows a hypothetical the change in the real value of an annual salary of \$45,000 between March 1999 and today, under three scenarios - wages offset by changes in consumer price index, wages offset by changes in the cost of living, and wages increased in real terms by 3% each year.
+
+```{r}
+#| label: fig-wpi-cost-of-living
+#| fig-cap: "Change in real value of an annual wage of $45,000 by comparison with CPI and LCI"
+cpi_pc <- read_abs_local("6401.0", filenames = "640101.xlsx", path = "data") |> 
+  filter(series == "Percentage Change from Corresponding Quarter of Previous Year ;  All groups CPI ;  Australia ;",
+         series_type == "Original") |> 
+  select(date, cpi_pc = value)
+
+lci_pc <- lci |> 
+  filter(data_type == "Percentage Change from Corresponding Quarter of Previous Year",
+         cpi_category == "All groups",
+         household_type == "Employee households") |> 
+  select(date, lci_pc = value)
+
+wpi_pc <-  wpi_quarterly |> 
+  filter(indicator == "Total hourly rates of pay excluding bonuses",
+         data_type == "Quarterly Index",
+         state == "Australia",
+         sector == "Private and Public",
+         industry == "All industries") |> 
+  distinct() |> 
+  select(date, wpi = value) |> 
+  mutate(wpi_pc = 100*(wpi-lag(wpi, 4))/lag(wpi, 4))
+
+wage_price <- wpi_pc |> 
+  inner_join(cpi_pc) |>
+  inner_join(lci_pc) |> 
+  filter(!is.na(lci_pc)) |> 
+  mutate(real_wage_growth = wpi_pc - cpi_pc,
+         real_wage_growth_cost_of_living = wpi_pc - lci_pc,
+         real_wage_constant = 3/4) |> 
+  filter(!is.na(wpi_pc)) |> 
+  mutate(real_wage = 45000+(45000*cumsum(real_wage_growth)/100),
+         real_wage_3 = 45000+(45000*cumsum(real_wage_constant/100)),
+         real_wage_lci = 45000+(45000*cumsum(real_wage_growth_cost_of_living)/100)) |> 
+  add_row(.before = 1, 
+          date = as_date("1999-03-01"),
+          real_wage = 45000,
+          real_wage_3 = 45000,
+          real_wage_lci = 45000)
+
+wage_price |> 
+  pivot_longer(cols = c(real_wage, real_wage_lci, real_wage_3)) |> 
+  mutate(name = case_when(
+    name == "real_wage" ~ "Real Wage (CPI)",
+    name == "real_wage_lci" ~ "Real Wage (Cost of Living)",
+    name == "real_wage_3" ~ "Constant 3% Real Wage Growth",
+  )) |> 
+  ggplot(aes(x = date, y = value, col = name)) + 
+  geom_line() +
+  theme_nrc(legend = 'bottom') +
+  scale_colour_nrc() + 
+  labs(x = NULL,
+       y = NULL,
+       title = "Value of real wages that were equal to $45,000 in March 1999") +
+  scale_y_continuous(labels = scales::label_currency())
+```

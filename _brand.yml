@@ -1,0 +1,22 @@
+color: 
+  palette: 
+    blue: "#094fa3"
+    darkblue: "#001d26"
+    yellow: "#febe10"
+    orange: "#f15c30"
+    grey: "#e4e4e4"
+    darkgrey: "#231f20"
+    white: "#ffffff"
+  primary: blue
+logo: 
+  small: img/amwu.png
+typography:
+  fonts:
+    - family: Merriweather
+      source: google
+    - family: Sansation
+      source: google
+  base: Merriweather
+  headings: 
+    family: Sansation
+    color: primary

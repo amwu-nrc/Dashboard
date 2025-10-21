@@ -1,0 +1,13 @@
+---
+title: "About"
+---
+
+Economics taught to Organisers, Delegates, at the AMWU
+
+-   Lecture Notes
+
+-   One Page Summaries
+
+```{r}
+1 + 1
+```

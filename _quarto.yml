@@ -6,7 +6,7 @@ project:
     port: 4200
     browser: false
 website:
-  title: "Delegates Training Unit 4"
+  title: "AMWU Member Portal"
   navbar:
     search: true
     left:
@@ -14,6 +14,8 @@ website:
         href: index.qmd
       - text: "Economics and Political Economy"
         href: productivity.qmd
+      - text: "Presentations"
+        href: presentations.qmd
         
   sidebar:
     - title: "Economics and Political Economy"
@@ -35,15 +37,12 @@ format:
       - brand
     css: styles.css
     toc: true
-  docx:
-    fig-format: svg
-    fig-width: 8
-    fig-asp: 0.618
   typst:
     logo:
       location: right-top
-      padding-left: 1in
-      padding-bottom: 2in
+      padding-right: 1.5cm
+      padding-bottom: 3cm
+      padding-top: 1.5cm
     fig-format: svg
     fig-width: 8
     fig-asp: 0.618
@@ -55,5 +54,5 @@ execute:
   warning: false
   message: false
   
-brand:  _brand.yml
+brand:  _extensions/amwu-nrc/amwu-brand/brand.yml
 

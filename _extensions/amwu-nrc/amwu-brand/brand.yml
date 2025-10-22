@@ -12,11 +12,11 @@ logo:
   small: img/amwu.png
 typography:
   fonts:
-    - family: Merriweather
+    - family: Noto Sans
       source: google
     - family: Sansation
       source: google
-  base: Merriweather
+  base: Noto Sans
   headings: 
     family: Sansation
     color: primary

@@ -1,0 +1,16 @@
+---
+title: "Presentations"
+slide-format: revealjs
+---
+
+## Delegates Unit 4
+
+This is the slide deck from the Unit 4 course for Delegates.
+
+<div>
+
+```{=html}
+<iframe class="slide-deck" src="https://amwu-nrc.github.io/economics-presentations/du4-economics-political-economy-hamish-gamble#/title-slide"></iframe>
+```
+
+</div>

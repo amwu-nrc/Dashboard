@@ -17,19 +17,27 @@ The study of economics is ideological. It is a social science, not a hard scienc
 
 ## History of Economics
 
-The study of economics has always been a reflection of the politics of the time. Two examples below:
+What follow is a rather dry history of different people and ideas.
+
+Ultimatly, the study of economics has always been a reflection of the politics of the time. Two examples below:
 
 ::: {.callout-note appearance="simple"}
-In the 1600s, the dominant ideology of Britain was *mercantilism,* based on the growing power of Britain, and the vast trade networks they had developed through colonialism. The economics of the time was a reflection of this ideology, highlighting the ways in which trade was important for a country's economic development. Economists argued for increased power of the state (to strengthen colonial power) and for government's to maintain a trade surplus.
+In the 1600s, the dominant ideology of Britain was *mercantilism,* based on the growing power of Britain, and the vast trade networks they had developed through colonialism.
+
+The economics of the time was a reflection of this ideology, highlighting the ways in which trade was important for a country's economic development.
+
+Economists argued for increased power of the state (to strengthen colonial power) and for government's to maintain a trade surplus.
 :::
 
 ::: {.callout-note appearance="simple"}
-In France, about 100 years later, the *physiocrats* considered two distinct industries - agricultural, and non-agricultural, in reflection of the growing industrialisation in workshops and of artisans. The physiocrats believed that only agricultural labour could create value in the products of society, and that non-agricultural labour was unproductive.
+In France, about 100 years later, the *physiocrats* considered two distinct industries - agricultural, and non-agricultural, in reflection of the growing industrialisation in workshops and of artisans.
+
+The physiocrats believed that only agricultural labour could create value in the products of society, and that non-agricultural labour was unproductive.
 :::
 
 ### **Classical Economics**
 
-Prior to and during the industrial revolution, classical economics was developed, primarily through Adam Smith - advancing the theory of the divisibility of labour - that it is more productive for individuals to specialise in one part of the creation of a product, rather than the whole chain. Again - the economics is reflective of the political - increased work in factories, industrial revolution, factory work. Adam Smith is seen by some as the guy who invented free market economics. But Smith was strongly opposed to monopolies, and recognised the importance of *class*, compared to *individual.*
+With the industrial revolution came classical economics. Adam Smith, in trying to understand why some countries were more wealthy than others, to - advancing the theory of the divisibility of labour - that it is more productive for individuals to specialise in one part of the creation of a product, rather than the whole chain. Again - the economics is reflective of the political - increased work in factories, industrial revolution, factory work. Adam Smith is seen by some as the guy who invented free market economics. But Smith was strongly opposed to monopolies, and recognised the importance of *class*, compared to *individual.*
 
 Some ideas have lasted longer than others. Smith's division of labour is still popular today. Others, like Malthus who argued that any wages greater than that required to subside would fuel unstable population growth that absorbed any real income growth, have *mostly* died out.
 

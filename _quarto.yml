@@ -26,9 +26,10 @@ website:
         - political-economy.qmd
 
 
+bibliography: 
+    - references.bib
 format:
   html:
-    bibliography: references.bib
     fig-format: svg
     fig-width: 8
     fig-asp: 0.618

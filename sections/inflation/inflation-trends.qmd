@@ -1,0 +1,121 @@
+{{< include _inflation-setup.md >}}
+
+# Trends
+
+### Inflation - Percentage Change
+
+```{r}
+#| label: fig-inflation-pc
+#| fig-cap: "Consumer Price Index, Percentage Change from Corresponding Month of Previous Year"
+cpi_pc <- cpi |> 
+  filter(data_type == "Percentage Change from Corresponding Month of Previous Year",
+         capital_city == "Australia",
+         cpi_category == "All groups CPI",
+         date >= "2020-01-01") 
+
+cpi_pc |> 
+  ggplot(aes(x = date, y = value, col = "inflation")) +
+  geom_line() +
+  theme_nrc() +
+  scale_x_date(date_labels = "%e %b\n%Y",
+               breaks = plot_date_range(cpi_pc)) +
+  scale_y_continuous(labels = scales::label_percent(scale = 1)) + 
+  labs(title = "Percentage Change in the CPI from Corresponding Month of Previous Year",
+       subtitle = "All groups CPI; Australia",
+       y = NULL,
+       x = NULL) +
+  annotate(geom = "textsegment", 
+           arrow = arrow(), 
+           label = "increasing inflation",
+           x = as_date("2020-06-01"), 
+           y = 2,
+           xend = as_date("2022-12-01"), 
+           yend = 10) +
+  annotate(geom = "textsegment", 
+           arrow = arrow(),
+           label = "decreasing inflation",
+           x = as_date("2022-12-01"),
+           y = 10,
+           xend = as_date(max(cpi_pc$date)),
+           yend = 3)
+```
+
+### Inflation - Index
+
+While decreasing inflation (a % change in one period lower than the % change in the preceding period) is usually presented in the media as good news, it is important to remember that inflation is a measure of acceleration. Decreasing inflation means that the rate of price increases has slowed. Just because you take the foot off the accelerator, does not mean the car goes backwards.
+
+```{r}
+#| label: fig-inflation-index
+#| fig-cap: Consumer Price Index, Index (June 2011 = 100) 
+
+cpi_index <- cpi |> 
+  filter(data_type == "Index Numbers",
+         capital_city == "Australia",
+         cpi_category == "All groups CPI",
+         date >= "2020-01-01")
+
+cpi_index |> 
+  ggplot(aes(x = date, y = value, col = "inflation")) +
+  geom_line() +
+  theme_nrc() +
+  scale_x_date(date_labels = "%e %b\n%Y",
+               breaks = plot_date_range(cpi_index)) +
+  labs(title = "Consumer Price Index",
+       subtitle = "Australia; All Groups CPI",
+       y = NULL,
+       x = NULL) +
+  annotate(geom = "textsegment", 
+           arrow = arrow(), 
+           label = "increasing prices",
+           x = as_date("2020-06-01"), 
+           y = 110,
+           xend = as_date("2022-12-01"), 
+           yend = 120) +
+  annotate(geom = "textsegment", 
+           arrow = arrow(),
+           label = "increasing prices",
+           x = as_date("2022-12-01"),
+           y = 120,
+           xend = as_date(max(cpi_index$date)),
+           yend = 130)
+```
+
+The all groups CPI is a measure of the average price change of all groups. But the impact of price changes in some categories, like food, recreation and culture, and housing are felt differently than changes to prices in household equipment. @fig-cpi-category shows the change in the prices of some categories.
+
+```{r}
+#| label: fig-cpi-category
+#| fig-cap: CPI by category
+cpi_category <- cpi |> 
+  filter(cpi_category %in% c("All groups CPI",
+                             "Food and non-alcoholic beverages",
+                             "Alcohol and tobacco",
+                             "Clothing and footwear",
+                             "Housing",
+                             "Furnishings, household equipment and services",
+                             "Health", 
+                             "Transport",
+                             "Communications",
+                             "Recreation and Culture",
+                             "Education",
+                             "Insurance and financial services"),
+         series_type == "Original",
+         data_type == "Index Numbers",
+         capital_city == "Australia") |> 
+  group_by(cpi_category) |> 
+  mutate(reindex = 100*value/value[date=="2020-03-01"]) |> 
+  filter(date >= as_date("2020-03-01")) |> 
+  ungroup()
+
+cpi_category |> 
+  ggplot(aes(x = date, y = reindex, col = cpi_category)) +
+  geom_line() +
+  scale_x_date(date_labels = "%e %b\n %Y",
+               breaks = plot_date_range(cpi_category)) +
+  gghighlight(cpi_category %in% c("Housing", "All groups CPI", "Food and non-alcoholic beverages", "Furnishings, household equipment and services")) +
+  theme_nrc() +
+  labs(y = NULL,
+       x = NULL,
+       title = "Consumer Price Index (100 = March 2020)",
+       subtitle = "CPI Expenditure Classes") +
+  scale_colour_nrc() 
+```

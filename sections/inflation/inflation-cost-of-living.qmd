@@ -1,0 +1,63 @@
+{{< include _inflation-setup.md >}}
+
+# Cost of Living
+
+The CPI is not a measure of the cost of living. In fact there is no definitive cost of living measure collected by the ABS but the ABS does collect a living cost index, which looks at different household types expenditure patterns.
+
+The living cost index asks "By how much would after tax money incomes need to change to allow households to purchase the same quantity of consumer goods and services that they purchased in the base period?"
+
+```{r}
+#| label: tbl-cost-of-living
+#| tbl-cap: Employee households cost of living
+#| tbl-subcap: ["Change over last year", "Change over last decade"]
+#| layout-ncol: 2
+
+
+
+# table on the left
+lci |> 
+  filter(data_type == "Percentage Change from Corresponding Quarter of Previous Year", 
+         !is.na(value), 
+         date == max(date),
+         household_type == "Employee households") |> 
+  select(cpi_category, value) |> 
+  add_row(cpi_category = "Wages",
+          value = 3.4) |> 
+  arrange(-value) |> 
+  gt(rowname_col = "cpi_category") |> 
+  tab_header(title = md("**Change in living costs by product category**"),
+             subtitle = "% change between June 2025 and June 2024") |> 
+  tab_stubhead(label = "Price Category") |> 
+  tab_style(style = cell_text(weight = "bold"),
+            locations = cells_body(
+              rows = cpi_category %in% c("All groups", "Wages")
+            )) |> 
+  fmt_percent(columns = value, scale = F, decimal = 1) |> 
+  cols_label(value = "% change")
+
+# table on the right
+lci |> 
+  filter(data_type == "Index Numbers", 
+         !is.na(value), 
+         date %in% c(max(date), max(date)-years(10)),
+         household_type == "Employee households") |> 
+   group_by(cpi_category) |> 
+  mutate(percentage = 100*(value-lag(value))/lag(value)) |>
+  ungroup() |> 
+  filter(date == max(date)) |> 
+  select(cpi_category, percentage) |> 
+  add_row(cpi_category = "Wages",
+          percentage = 28.7) |> 
+  arrange(-percentage) |> 
+  gt(rowname_col = "cpi_category") |> 
+  tab_header(title = md("**Change in living costs by product category**"),
+             subtitle = "% change between June 2025 and June 2015") |> 
+  tab_stubhead(label = "Price Category") |> 
+  tab_style(style = cell_text(weight = "bold"),
+            locations = cells_body(
+              rows = cpi_category %in% c("All groups", "Wages")
+            )) |> 
+  fmt_percent(columns = percentage, scale = F, decimal = 1) |> 
+  cols_label(percentage = "% change")
+
+```

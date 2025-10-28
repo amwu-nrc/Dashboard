@@ -1,0 +1,17 @@
+# Definition
+
+Productivity is about quantities, not costs. It is the rate at which we produce goods or services per unit of input. Think: how many workers does it take to make a widget?
+
+Productivity is also about technological progress. If a new technology enables the production of the same number of goods in fewer hours, that increases productivity.
+
+Workers do not often get to make decisions about technology in their workplace. These are decisions made by management. It is also important to recognise that changes to GDP or GVA can occur even without changes to input.
+
+## Labour Productivity
+
+**Labour productivity** is measured by Gross Domestic Product (**GDP**) per hour worked. At the industry level, it is measured by Gross Value Added (**GVA**) per hour worked. This is relatively easy to measure and describe.
+
+## Multi-Factor Productivity
+
+Because capital is also an input into production, there is also an estimate called **multi-factor productivity**. This is more difficult to measure, and even more difficult to describe.
+
+Because labour power is the work which adds value, we will focus only on labour productivity.

@@ -1,19 +1,17 @@
 project:
   type: website
-  resources: 
-        - productivity-single.pdf
   preview: 
     port: 4200
     browser: false
 website:
-  title: "AMWU Member Portal"
+  title: "Blog"
+  description: "Website Description"
+  page-navigation: true
   navbar:
-    search: true
+    pinned: true
     left:
-      - text: "Home"
-        href: index.qmd
       - text: "Economics and Political Economy"
-        href: productivity.qmd
+        file: index.qmd
       - text: "Presentations"
         href: presentations.qmd
         
@@ -21,11 +19,25 @@ website:
     - title: "Economics and Political Economy"
       style: "docked"
       contents:
-        - productivity.qmd
-        - inflation.qmd
-        - political-economy.qmd
-
-
+        - text: Economics and Political Economy
+          file: index.qmd
+        - section: Productivity
+          contents:
+          - sections/productivity/productivity-summary.qmd
+          - sections/productivity/productivity-definition.qmd
+          - sections/productivity/productivity-trends.qmd
+          - sections/productivity/productivity-wages.qmd
+          - sections/productivity/productivity-work.qmd
+        - section: Inflation
+          contents:
+          - sections/inflation/inflation-summary.qmd
+          - sections/inflation/inflation-definition.qmd
+          - sections/inflation/inflation-trends.qmd
+          - sections/inflation/inflation-cost-of-living.qmd
+          - sections/inflation/inflation-wages.qmd
+        - section: Political Economy
+          contents:
+          - sections/political-economy/political-economy.qmd
 bibliography: 
     - references.bib
 format:
@@ -34,20 +46,9 @@ format:
     fig-width: 8
     fig-asp: 0.618
     theme:
-      - cosmo
       - brand
     css: styles.css
     toc: true
-  typst:
-    logo:
-      location: right-top
-      padding-right: 1.5cm
-      padding-bottom: 3cm
-      padding-top: 1.5cm
-    fig-format: svg
-    fig-width: 8
-    fig-asp: 0.618
-
 
 editor: visual
 execute: 
@@ -56,4 +57,5 @@ execute:
   message: false
   
 brand:  _extensions/amwu-nrc/amwu-brand/brand.yml
+brand-mode: light
 

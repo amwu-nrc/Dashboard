@@ -2,10 +2,8 @@
 title: "AMWU Economics"
 ---
 
-This is a Quarto website.
+-   Economics is important
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+-   How to talk about economics?
 
-```{r}
-1 + 1
-```
+-   Give confidence to talk about these issues

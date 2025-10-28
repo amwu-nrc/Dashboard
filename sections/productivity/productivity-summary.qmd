@@ -1,0 +1,25 @@
+# Summary
+
+Productivity is a widely reported but commonly misunderstood economic indicator. People, especially bosses, economists, and industry groups like to talk about it, but don't seem to understand what it is. In a Fair Work Commission (**FWC**) hearing in 2025, the chief economist of the Australian Chamber of Commerce and Industry was asked what factors drove productivity and said:
+
+> "the Productivity Commission was currently examining those factors"
+
+You would hope that after 35 years of existence, the productivity commission already knew what factors drive productivity.
+
+The conversation also fails to consider who benefits from increases to productivity.
+
+::: panel-tabset
+## They Say
+
+Andrew McKellar, Chief Executive Officer, Australian Chamber of Commerce and Industry
+
+> From a business point of view, we’re very happy to sit down and work with the trade union movement. But we want to get a strategy that’s built around how we improve productivity.
+
+> \[...\] unions need to moderate their wage claims, and offer measures to improve labour productivity.
+
+## We Say
+
+> Decisions which impact productivity in the workplace are made by management, not by workers.
+:::
+
+This article describes how productivity is measured and provides an overview of the drivers of productivity, and more importantly, who in the workplace is responsible for implementing those drivers.

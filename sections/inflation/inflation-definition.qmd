@@ -1,0 +1,23 @@
+# Definition
+
+Inflation is measured by the Consumer Price Index (**CPI**).
+
+The CPI is a measure of changes in the price of a "basket" of goods and services.
+
+By their nature, averages are not representative of individuals. Statistical agencies have to make a lot of decisions when calculating price indices, including:
+
+-   What goes into the basket?
+
+-   How should like items be grouped?
+
+-   How should each group be weighted into the overall?
+
+-   How often should the weighting change?
+
+Ultimately, the basket of goods and services does not represent the spending or expenditure patterns of any one individual. There will be a disconnect between how the CPI is reported, and how you feel it as an individual.
+
+For example, in 2025 the weight of tobacco in the CPI was reduced because tobacco sales fell as fewer people are smoking. That means increases in the price of cigarettes don't impact on the overall CPI as much. So smokers will feel that prices are increasing faster than the CPI.
+
+Another disconnect between reporting of the CPI and worker experiences is that mortgage payments are excluded from the housing element of the CPI - only the price of a new home (excluding land) and changes in the price of rents are included.
+
+CPI data is reported as an ***index***, or as a ***% change compared to the previous quarter***, or previous year. An *index* shows how prices have changed relative to a value of 100 in a reference period. A percentage change measures the relative change in prices compared to another period.

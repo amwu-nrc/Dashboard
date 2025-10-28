@@ -1,0 +1,23 @@
+# Productivity and Wages
+
+{{< include _productivity-setup.md >}}
+
+If productivity is a measure of output per hour, it would only be fair to compare that with how much compensation (in real terms) workers are getting per hour. The relationship between labour productivity and real compensation for workers per hour is shown in @fig-productivity-decouple. It shows that the benefits of increased productivity have not been passed on to workers since about 2000. The attempts by industry groups and the Reserve Bank to now tie future wage increases to productivity growth is an attempt at locking in the gains made by business owners at workers expense.
+
+```{r}
+#| label: fig-productivity-decouple
+#| fig-cap: Productivity (output per hour) in comparison with real compensation for workers per hour
+#| 
+productivity_decouple |> 
+  ggplot(aes(x = date, y = value, col = name)) +
+  geom_line() +
+  scale_x_date(date_labels = "%e %b\n %Y",
+               breaks = plot_date_range(productivity_decouple)) +
+  labs(x = NULL,
+       y = NULL,
+       title = "The Benefits of Increased Productivity Are Not Passed On To Workers",
+       subtitle = "Productivity and Real Compensation per Hour Worked (March 1991 = 100)") +
+  theme_nrc(legend = "bottom") +
+  scale_colour_nrc()
+
+```

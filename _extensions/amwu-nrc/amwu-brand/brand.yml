@@ -1,22 +1,38 @@
 color: 
   palette: 
-    blue: "#094fa3"
-    darkblue: "#001d26"
-    yellow: "#febe10"
-    orange: "#f15c30"
-    grey: "#e4e4e4"
-    darkgrey: "#231f20"
+    lagoon: "#00415b"
+    midnight: "#111a41"
+    vivid-orange: "#ff5800"
+    dark-slate: "#001d26"
+    deep-grey: "#4a4d56"
+    mercury: "#cbd1d4"
+    silver: "#ebeced"
     white: "#ffffff"
-  primary: blue
+    steel-blue: "#006da7"
+    sky: "#00acd0"
+    grey: "#bcbec0"
+    blue: midnight
+    red: vivid-orange
+  primary: vivid-orange
+  background: 
+    light: silver
+    dark: midnight
+  foreground: 
+    light: midnight
+    dark: silver
+  
 logo: 
   small: img/amwu.png
 typography:
   fonts:
-    - family: Noto Sans
+    - family: "Open Sans"
       source: google
-    - family: Sansation
-      source: google
-  base: Noto Sans
+    - family: Stag
+      source: file
+      files:
+        - path: fonts/stag/Stag-Semibold.otf
+  base:
+    family: Open Sans
   headings: 
-    family: Sansation
+    family: Stag-Semibold
     color: primary

@@ -20,7 +20,7 @@
     "crumbs": [
       "Economics and Political Economy",
       "Productivity",
-      "Trends"
+      "Productivity Trends"
     ]
   },
   {
@@ -32,7 +32,7 @@
     "crumbs": [
       "Economics and Political Economy",
       "Productivity",
-      "Trends"
+      "Productivity Trends"
     ]
   },
   {
@@ -44,7 +44,7 @@
     "crumbs": [
       "Economics and Political Economy",
       "Productivity",
-      "Definition"
+      "Productivity Definition"
     ]
   },
   {
@@ -56,7 +56,7 @@
     "crumbs": [
       "Economics and Political Economy",
       "Productivity",
-      "Definition"
+      "Productivity Definition"
     ]
   },
   {
@@ -68,7 +68,7 @@
     "crumbs": [
       "Economics and Political Economy",
       "Productivity",
-      "Definition"
+      "Productivity Definition"
     ]
   },
   {
@@ -92,19 +92,19 @@
     "crumbs": [
       "Economics and Political Economy",
       "Inflation",
-      "Summary"
+      "Inflation Summary"
     ]
   },
   {
     "objectID": "sections/inflation/inflation-cost-of-living.html",
     "href": "sections/inflation/inflation-cost-of-living.html",
-    "title": "Cost of Living",
+    "title": "Inflation and the Cost of Living",
     "section": "",
-    "text": "Cost of Living\nThe CPI is not a measure of the cost of living. In fact there is no definitive cost of living measure collected by the ABS but the ABS does collect a living cost index, which looks at different household types expenditure patterns.\nThe living cost index asks “By how much would after tax money incomes need to change to allow households to purchase the same quantity of consumer goods and services that they purchased in the base period?”\n\n\n\nTable 1: Employee households cost of living\n\n\n\n\n\n\n\n\n\n\n(a) Change over last year\n\n\n\n\n\nChange in living costs by product category\n\n\n% change between June 2025 and June 2024\n\n\nPrice Category\n% change\n\n\n\n\nEducation\n5.7%\n\n\nAlcohol and tobacco\n5.5%\n\n\nHealth\n4.3%\n\n\nInsurance and financial services\n4.3%\n\n\nWages\n3.4%\n\n\nFood and non-alcoholic beverages\n3.0%\n\n\nHousing\n2.8%\n\n\nAll groups\n2.6%\n\n\nRecreation and culture\n1.8%\n\n\nClothing and footwear\n1.2%\n\n\nCommunication\n1.0%\n\n\nFurnishings, household equipment and services\n0.9%\n\n\nTransport\n−2.9%\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(b) Change over last decade\n\n\n\n\n\nChange in living costs by product category\n\n\n% change between June 2025 and June 2015\n\n\nPrice Category\n% change\n\n\n\n\nAlcohol and tobacco\n76.0%\n\n\nInsurance and financial services\n71.8%\n\n\nHealth\n45.0%\n\n\nEducation\n42.0%\n\n\nAll groups\n34.4%\n\n\nFood and non-alcoholic beverages\n32.8%\n\n\nWages\n28.7%\n\n\nHousing\n28.2%\n\n\nTransport\n27.3%\n\n\nRecreation and culture\n20.6%\n\n\nFurnishings, household equipment and services\n19.7%\n\n\nClothing and footwear\n2.8%\n\n\nCommunication\n−20.1%",
+    "text": "The CPI is not a measure of the cost of living. In fact there is no definitive cost of living measure collected by the ABS but the ABS does collect a living cost index, which looks at different household types expenditure patterns.\nThe living cost index asks “By how much would after tax money incomes need to change to allow households to purchase the same quantity of consumer goods and services that they purchased in the base period?”\n\n\n\nTable 1: Employee households cost of living\n\n\n\n\n\n\n\n\n\n\n(a) Change over last year\n\n\n\n\n\nChange in living costs by product category\n\n\n% change between June 2025 and June 2024\n\n\nPrice Category\n% change\n\n\n\n\nEducation\n5.7%\n\n\nAlcohol and tobacco\n5.5%\n\n\nHealth\n4.3%\n\n\nInsurance and financial services\n4.3%\n\n\nWages\n3.4%\n\n\nFood and non-alcoholic beverages\n3.0%\n\n\nHousing\n2.8%\n\n\nAll groups\n2.6%\n\n\nRecreation and culture\n1.8%\n\n\nClothing and footwear\n1.2%\n\n\nCommunication\n1.0%\n\n\nFurnishings, household equipment and services\n0.9%\n\n\nTransport\n−2.9%\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(b) Change over last decade\n\n\n\n\n\nChange in living costs by product category\n\n\n% change between June 2025 and June 2015\n\n\nPrice Category\n% change\n\n\n\n\nAlcohol and tobacco\n76.0%\n\n\nInsurance and financial services\n71.8%\n\n\nHealth\n45.0%\n\n\nEducation\n42.0%\n\n\nAll groups\n34.4%\n\n\nFood and non-alcoholic beverages\n32.8%\n\n\nWages\n28.7%\n\n\nHousing\n28.2%\n\n\nTransport\n27.3%\n\n\nRecreation and culture\n20.6%\n\n\nFurnishings, household equipment and services\n19.7%\n\n\nClothing and footwear\n2.8%\n\n\nCommunication\n−20.1%",
     "crumbs": [
       "Economics and Political Economy",
       "Inflation",
-      "Cost of Living"
+      "Inflation and the Cost of Living"
     ]
   },
   {
@@ -140,7 +140,7 @@
     "crumbs": [
       "Economics and Political Economy",
       "Inflation",
-      "Definition"
+      "Inflation Definition"
     ]
   },
   {
@@ -152,7 +152,7 @@
     "crumbs": [
       "Economics and Political Economy",
       "Inflation",
-      "Trends"
+      "Inflation Trends"
     ]
   },
   {
@@ -256,7 +256,7 @@
     "href": "sections/productivity/productivity-wages.html",
     "title": "Productivity and Wages",
     "section": "",
-    "text": "Productivity and Wages\nIf productivity is a measure of output per hour, it would only be fair to compare that with how much compensation (in real terms) workers are getting per hour. The relationship between labour productivity and real compensation for workers per hour is shown in Figure 1. It shows that the benefits of increased productivity have not been passed on to workers since about 2000. The attempts by industry groups and the Reserve Bank to now tie future wage increases to productivity growth is an attempt at locking in the gains made by business owners at workers expense.\n\n\n\n\n\n\n\n\nFigure 1: Productivity (output per hour) in comparison with real compensation for workers per hour",
+    "text": "If productivity is a measure of output per hour, it would only be fair to compare that with how much compensation (in real terms) workers are getting per hour. The relationship between labour productivity and real compensation for workers per hour is shown in Figure 1. It shows that the benefits of increased productivity have not been passed on to workers since about 2000. The attempts by industry groups and the Reserve Bank to now tie future wage increases to productivity growth is an attempt at locking in the gains made by business owners at workers expense.\n\n\n\n\n\n\n\n\nFigure 1: Productivity (output per hour) in comparison with real compensation for workers per hour",
     "crumbs": [
       "Economics and Political Economy",
       "Productivity",

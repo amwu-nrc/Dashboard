@@ -1,6 +1,8 @@
 {{< include _productivity-setup.md >}}
 
-# Trends
+---
+title: Trends in Productivity
+---
 
 ### The Market and the Non-Market
 
@@ -14,7 +16,7 @@ anzsic_codes <- anzsic2006 |>
   select(contains("_division")) |> 
   distinct()
 
-industry_employment <- read_abs("6291.0.55.001", path = "data/") 
+industry_employment <- read_abs_local("6291.0.55.001", path = "data") 
 
 sector_employment <- industry_employment |> 
   filter(series_type == "Seasonally Adjusted") |> 

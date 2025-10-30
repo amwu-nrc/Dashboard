@@ -23,18 +23,28 @@ website:
           file: index.qmd
         - section: Productivity
           contents:
-          - sections/productivity/productivity-summary.qmd
-          - sections/productivity/productivity-definition.qmd
-          - sections/productivity/productivity-trends.qmd
-          - sections/productivity/productivity-wages.qmd
-          - sections/productivity/productivity-work.qmd
+            - text: Summary
+              file: sections/productivity/productivity-summary.qmd
+            - text: Productivity Definition
+              file: sections/productivity/productivity-definition.qmd
+            - text: Productivity Trends
+              file: sections/productivity/productivity-trends.qmd
+            - text: Productivity and Wages
+              file: sections/productivity/productivity-wages.qmd
+            - text: Productivity in the Workplace
+              file: sections/productivity/productivity-work.qmd
         - section: Inflation
           contents:
-          - sections/inflation/inflation-summary.qmd
-          - sections/inflation/inflation-definition.qmd
-          - sections/inflation/inflation-trends.qmd
-          - sections/inflation/inflation-cost-of-living.qmd
-          - sections/inflation/inflation-wages.qmd
+            - text: Inflation Summary
+              file: sections/inflation/inflation-summary.qmd
+            - text: Inflation Definition
+              file: sections/inflation/inflation-definition.qmd
+            - text: Inflation Trends
+              file: sections/inflation/inflation-trends.qmd
+            - text: Inflation and the Cost of Living
+              file: sections/inflation/inflation-cost-of-living.qmd
+            - text: Inflation and Wages
+              file: sections/inflation/inflation-wages.qmd
         - section: Political Economy
           contents:
           - sections/political-economy/political-economy.qmd

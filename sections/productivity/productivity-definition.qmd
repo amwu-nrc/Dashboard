@@ -1,4 +1,6 @@
-# Definition
+---
+title: What is Productivity?
+---
 
 Productivity is about quantities, not costs. It is the rate at which we produce goods or services per unit of input. Think: how many workers does it take to make a widget?
 

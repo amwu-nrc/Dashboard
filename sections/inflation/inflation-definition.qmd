@@ -1,4 +1,6 @@
-# Definition
+---
+title: What is Inflation?
+---
 
 Inflation is measured by the Consumer Price Index (**CPI**).
 

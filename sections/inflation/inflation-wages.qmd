@@ -1,5 +1,9 @@
 {{< include _inflation-setup.md >}}
 
+---
+title: Inflation and Wages
+---
+
 # Inflation and Wages
 
 When discussing inflation, we need to consider the relationship between increasing prices and increasing wages. If wages are increasing at the same rate as prices, then no ones purchasing power is getting any better or worse. How this feels will depend on the historical relationship between prices and wages.

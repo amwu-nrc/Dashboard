@@ -1,4 +1,6 @@
-# Productivity and Wages
+---
+title: Productivity and Wages
+---
 
 {{< include _productivity-setup.md >}}
 

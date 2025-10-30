@@ -1,6 +1,8 @@
 {{< include _inflation-setup.md >}}
 
-# Cost of Living
+---
+title: "Inflation and the Cost of Living"
+---
 
 The CPI is not a measure of the cost of living. In fact there is no definitive cost of living measure collected by the ABS but the ABS does collect a living cost index, which looks at different household types expenditure patterns.
 

@@ -1,4 +1,6 @@
-# Summary
+---
+title: Productivity Summary
+---
 
 Productivity is a widely reported but commonly misunderstood economic indicator. People, especially bosses, economists, and industry groups like to talk about it, but don't seem to understand what it is. In a Fair Work Commission (**FWC**) hearing in 2025, the chief economist of the Australian Chamber of Commerce and Industry was asked what factors drove productivity and said:
 

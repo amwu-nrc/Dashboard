@@ -1,6 +1,8 @@
 {{< include _inflation-setup.md >}}
 
-# Trends
+---
+title: Trends in Inflation
+---
 
 ### Inflation - Percentage Change
 

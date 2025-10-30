@@ -13,8 +13,8 @@ cpi <- read_abs_local("6484.0", path = "data") |>
 
 cpi_quarterly <- read_absdata("cpi_quarterly", export_dir = "data")
 wpi_quarterly <- read_absdata("wpi_quarterly", export_dir = "data")
-national_accounts <- read_abs(cat_no = "5206.0", tables = c(1, 7), retain_files = TRUE,  path = "data")
-lci <- read_abs_local("6467.0", check_local = TRUE, tables = "2", path = "data", retain_files = T) |> 
+national_accounts <- read_abs_local(cat_no = "5206.0", path = "data")
+lci <- read_abs_local("6467.0",  path = "data") |> 
   separate_series(c("data_type", "household_type", "cpi_category"))
 
 
